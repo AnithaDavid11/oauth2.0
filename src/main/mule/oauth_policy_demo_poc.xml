@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
+	<flow name="oauth_policy_demo_pocFlow" doc:id="6315f57e-5acd-4075-a27f-94f020a4a84c" >
+		<logger level="INFO" doc:name="Logger" doc:id="0e216741-9bff-40c5-ab10-f016eae8be91" message="Initial Logger"/>
+		<ee:transform doc:name="Transform Message" doc:id="950e27cb-84fc-4681-9dfd-bd893caeae4f" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	Title: "Oauth 2.0 policy",
+	Message: "This API gives demo on Oauth2.0 policy using OKTA"
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="a2f738dc-f4a0-43a1-b3b8-4fc0863cc578" message="End logger"/>
+	</flow>
+</mule>

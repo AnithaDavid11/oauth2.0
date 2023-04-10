@@ -1,0 +1,17 @@
+#%RAML 1.0
+title: oauth_policy_poc
+
+
+
+/oauth_demo:
+  get:
+    description: "This Api is used to retrieve name and use of it"
+    responses:
+     200:
+      body:
+       application/json: 
+        example:
+          {
+            "Title" : "Oauth 2.0 policy",
+            "Message" : "This API gives the demo on Oauth2.0 policy using OKTA"
+          }
