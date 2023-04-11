@@ -29,6 +29,17 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				 <configuration>
+				<cloudHubDeployment>
+                        <uri>https://anypoint.mulesoft.com</uri>
+                        <muleVersion>${mule.version}</muleVersion>
+                        <username>AnithaDavid8MS</username>
+                        <password>Njcani@123</password>
+                        <environment>Sandbox</environment>
+                        <applicationName>oauth_policy_demo_poc</applicationName>
+                        <objectStoreV2>true</objectStoreV2>
+						</cloudHubDeployment>
+						 </configuration>
 			</plugin>
 		</plugins>
 	</build>
